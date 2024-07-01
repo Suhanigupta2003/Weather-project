@@ -1,0 +1,85 @@
+body {
+    margin: 0; /* Body ka margin 0 */
+    padding: 0; /* Body ka padding 0 */
+    box-sizing: border-box; /* Box sizing border-box set karna */
+    background-color: bisque; /* Background color set karna */
+}
+
+.container {
+    height: 100vh; /* Full viewport height */
+    background-image: url('weather.png'); /* Background image set karna */
+    background-repeat: no-repeat; /* Image repeat nahi karna */
+    background-size: cover; /* Container ko cover karna */
+    opacity: 0.9; /* Correct opacity value set karna */
+}
+
+.info {
+    height: 70%; /* Info section ki height */
+    width: 50%; /* Info section ki width */
+    margin: auto; /* Center align karna */
+    display: flex; /* Flexbox use karna alignment ke liye */
+    flex-direction: column; /* Children ko vertically stack karna */
+    justify-content: center; /* Children ko vertically center karna */
+    align-items: center; /* Children ko horizontally center karna */
+}
+
+#City {
+    height: 40px; /* Input field ki height */
+    width: 50%; /* Input field ki width */
+    margin-bottom: 50px; /* Input field ke neeche space */
+    text-align: center; /* Input field ka text center karna */
+    border-radius: 10px; /* Rounded corners set karna */
+    border: black solid 2px; /* Black border set karna */
+    background-color: rgb(173, 173, 202); /* Background color set karna */
+    color: rgb(7, 1, 14); /* Text color set karna */
+    font-size: large; /* Font size set karna */
+}
+
+input::placeholder {
+    color: rgb(8, 3, 21); /* Placeholder text color set karna */
+    opacity: 1; /* Opacity set karna (optional) */
+}
+
+#search {
+    height: 30px; /* Button ki height */
+    width: 30%; /* Button ki width */
+    border: solid black 2px; /* Black border set karna */
+    border-radius: 10px; /* Rounded corners set karna */
+    background-color: rgb(196, 196, 240); /* Background color set karna */
+    cursor: pointer; /* Hover pe pointer cursor dikhana */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions set karna */
+}
+
+#search:hover {
+    background-color: rgb(150, 150, 200); /* Hover pe background color change karna */
+    transform: scale(1.05); /* Hover pe button ko slightly enlarge karna */
+}
+
+#weather {
+    transition: opacity 0.5s ease; /* Visibility ke liye smooth transition set karna */
+}
+
+.hidden {
+    opacity: 0; /* Element invisible karna */
+    visibility: hidden; /* Element ko hide karna */
+}
+
+.visible {
+    opacity: 1; /* Element visible karna */
+    visibility: visible; /* Element ko show karna */
+}
+
+/* Responsive Design ke liye */
+@media (max-width: 768px) {
+    .info {
+        width: 80%; /* Mobile devices pe info section ki width adjust karna */
+    }
+
+    #City {
+        width: 80%; /* Mobile devices pe input field ki width adjust karna */
+    }
+
+    #search {
+        width: 50%; /* Mobile devices pe button ki width adjust karna */
+    }
+}
